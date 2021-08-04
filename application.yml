@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 9001
+spring:
+  profiles: dev
+  application:
+    name: spring-eureka01
+---
+server:
+  port: 9002
+spring:
+  profiles: pro
+  application:
+    name: spring-eureka02
