@@ -1,0 +1,43 @@
+spring:
+  profiles:
+    active: dev
+---
+# 应用名称
+spring:
+  profiles: dev
+  application:
+    name: eureka-server-dev
+
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: eureka01.com
+  client:
+    #只有生产者才需要进行服务注册
+    register-with-eureka: false
+    #只有消费者需要拉取服务
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka01.com:7001/eureka/
+---
+# 应用名称
+spring:
+  profiles: test
+  application:
+    name: eureka-server-test
+
+server:
+  port: 7002
+
+eureka:
+  instance:
+    hostname: eureka02.com
+  client:
+    #只有生产者才需要进行服务注册
+    register-with-eureka: false
+    #只有消费者需要拉取服务
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka02.com:7002/eureka/
