@@ -40,4 +40,4 @@ eureka:
     #只有消费者需要拉取服务
     fetch-registry: false
     service-url:
-      defaultZone: http://eureka02.com:7002/eureka/,http://eureka01.com:7001/eureka/
+      defaultZone: http://eureka01.com:7001/eureka/,http://eureka02.com:7002/eureka/
